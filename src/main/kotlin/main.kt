@@ -19,11 +19,11 @@ fun main() {
     println(contaAlex.saldo)
 
     println("depositando na conta do Alex")
-    contaAlex.deposita( 50.0)
+    contaAlex.deposita(50.0)
     println(contaAlex.saldo)
 
     println("depositando na conta da Fran")
-    contaFran.deposita( 70.0)
+    contaFran.deposita(70.0)
     println(contaFran.saldo)
 
     println("sacando na conta do Alex")
@@ -41,6 +41,17 @@ fun main() {
     println("saque em excesso na conta da Fran")
     contaFran.saca(500.0)
     println(contaFran.saldo)
+
+    println("Transferência da conta da Fran para o Alex")
+
+    if (contaFran.transfere(300.0, contaAlex)){
+        println("Transferência sucedida")
+    } else {
+        println("Falha na transferência")
+    }
+
+    println(contaAlex.saldo)
+    println(contaFran.saldo)
 }
 
 class Conta {
@@ -48,19 +59,29 @@ class Conta {
     var numero = 0
     var saldo = 0.0
 
-    fun deposita(valor: Double){
+    fun deposita(valor: Double) {
         this.saldo += valor
     }
 
-    fun saca(valor: Double){
-        if(saldo >= valor){
+    fun saca(valor: Double) {
+        if (saldo >= valor) {
             saldo -= valor
+        }
+    }
+
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            return true
+        } else {
+            return false
         }
     }
 
 }
 
-fun testaCopiasEReferencias(){
+fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX
     numeroY++
