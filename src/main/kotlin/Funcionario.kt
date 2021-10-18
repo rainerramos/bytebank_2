@@ -5,6 +5,6 @@ open class Funcionario(
 
     ) {
 
-    open val bonificacao: Double get() = salario * 0.1
+    open val bonificacao get() = salario * 0.1
 
 }
