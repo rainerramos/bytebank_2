@@ -7,4 +7,5 @@ abstract class Funcionario(
 
     abstract val bonificacao: Double
 
+
 }
