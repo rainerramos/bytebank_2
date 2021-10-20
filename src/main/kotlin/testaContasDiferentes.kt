@@ -1,6 +1,4 @@
-class testaContasDiferentes {
-
-    private fun testaContasDiferentes() {
+fun testaContasDiferentes()  {
         val contaCorrente = ContaCorrente(
             titular = "Alex",
             numero = 1000
@@ -33,4 +31,3 @@ class testaContasDiferentes {
         println("saldo corrente após receber transferência: ${contaCorrente.saldo}")
     }
 
-}
