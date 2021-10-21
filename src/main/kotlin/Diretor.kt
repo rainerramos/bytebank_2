@@ -9,7 +9,7 @@ class Diretor(
     cpf = cpf,
     salario = salario,
     senha = senha
-) {
+){
 
     override val bonificacao: Double
         get() {
