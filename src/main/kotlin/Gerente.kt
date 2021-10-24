@@ -15,4 +15,8 @@ class Gerente(
             return  salario
     }
 
+    override fun autentica(senha: Int): Boolean {
+        return super<Autenticavel>.autentica(senha)
+    }
+
 }

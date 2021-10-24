@@ -16,4 +16,8 @@ class Diretor(
             return salario + plr
         }
 
+    override fun autentica(senha: Int): Boolean {
+        return super<FuncionarioAdmin>.autentica(senha)
+    }
+
 }
