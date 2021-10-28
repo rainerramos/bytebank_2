@@ -5,6 +5,14 @@ import br.com.alura.bytebank.modelo.totalContas
 
 
 fun main() {
+
+    val fran = object {
+        val nome: String = "Fran"
+        val cpf: String = "111.111.111-11"
+        val senha: Int = 1000
+
+    }
+
     val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
     val contaPoupanca = ContaPoupanca(titular = alex, numero = 1000)
     val contaCorrente = ContaCorrente(titular = alex, numero = 1001)
