@@ -14,6 +14,8 @@ fun main() {
         fun autentica(senha: Int) = this.senha == senha
     }
 
+    println("nome do cliente ${fran.nome}")
+
     val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
     val contaPoupanca = ContaPoupanca(titular = alex, numero = 1000)
     val contaCorrente = ContaCorrente(titular = alex, numero = 1001)
