@@ -1,7 +1,4 @@
-import br.com.alura.bytebank.modelo.Cliente
-import br.com.alura.bytebank.modelo.ContaCorrente
-import br.com.alura.bytebank.modelo.ContaPoupanca
-import br.com.alura.bytebank.modelo.totalContas
+import br.com.alura.bytebank.modelo.*
 
 
 fun main() {
@@ -13,6 +10,9 @@ fun main() {
 
         fun autentica(senha: Int) = this.senha == senha
     }
+
+    val sistemaInterno = SistemaInterno()
+    sistemaInterno.entra(fran, 1000)
 
     println("nome do cliente ${fran.nome}")
 
