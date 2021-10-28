@@ -11,6 +11,7 @@ fun main() {
         val cpf: String = "111.111.111-11"
         val senha: Int = 1000
 
+        fun autentica(senha: Int) = this.senha == senha
     }
 
     val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
