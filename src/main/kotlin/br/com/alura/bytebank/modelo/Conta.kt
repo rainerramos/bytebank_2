@@ -6,8 +6,10 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
-    object Contador {
+
+    companion object Contador {
         var total = 0
+            private set
     }
 
     init {
@@ -48,7 +50,7 @@ class ContaCorrente(
 
     override fun saca(valor: Double) {
         val valorComTaxa = valor + 0.1
-        if (this.saldo >= valorComTaxa){
+        if (this.saldo >= valorComTaxa) {
             this.saldo -= valorComTaxa
         }
     }
@@ -67,7 +69,7 @@ class ContaPoupanca(
     }
 
     override fun saca(valor: Double) {
-        if (this.saldo >= valor){
+        if (this.saldo >= valor) {
             this.saldo -= valor
         }
     }

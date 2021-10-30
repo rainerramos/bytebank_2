@@ -21,12 +21,3 @@ fun main() {
 
     println("Total de contas: ${Conta.Contador.total}")
 }
-
-
-
-
-
-
-
-
-
