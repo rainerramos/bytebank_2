@@ -6,6 +6,9 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
+    object Contador {
+        var total = 0
+    }
 
     init {
         println("Criando conta")
