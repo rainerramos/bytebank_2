@@ -1,6 +1,8 @@
 import br.com.alura.bytebank.modelo.*
 
 
+// APENAS INFORMATIVO
+
 fun main() {
 
     val fran = object : Autenticavel {
@@ -10,7 +12,6 @@ fun main() {
 
         override fun autentica(senha: Int) = this.senha == senha
     }
-
     val sistemaInterno = SistemaInterno()
     sistemaInterno.entra(fran, 1000)
 
