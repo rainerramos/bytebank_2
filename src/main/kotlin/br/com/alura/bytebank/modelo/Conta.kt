@@ -7,14 +7,14 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
-    companion object Contador {
+    companion object {
         var total = 0
             private set
     }
 
     init {
         println("Criando conta")
-        Contador.total++
+        total++
     }
 
     fun deposita(valor: Double) {
@@ -43,11 +43,6 @@ class ContaCorrente(
     titular = titular,
     numero = numero
 ) {
-
-    init {
-
-    }
-
     override fun saca(valor: Double) {
         val valorComTaxa = valor + 0.1
         if (this.saldo >= valorComTaxa) {
@@ -63,11 +58,6 @@ class ContaPoupanca(
     titular = titular,
     numero = numero
 ) {
-
-    init {
-
-    }
-
     override fun saca(valor: Double) {
         if (this.saldo >= valor) {
             this.saldo -= valor
