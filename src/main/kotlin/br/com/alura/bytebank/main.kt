@@ -20,6 +20,8 @@ fun funcao2(){
     println("fim funcao2")
 }
 
+// EXECUTANDO PROGRAMA COM DEPURADOR (TEORIA SOMENTE)
+
 
 
 
